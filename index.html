@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>绚丽小球</title>
+<style type="text/css">
+	div{
+		width: 500px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	*{
+		font-family: "微软雅黑";
+		font-size: 15px;
+		color: #4D4545;
+		margin: 0;
+		padding: 0;
+	}
+	input{
+		width: 100px;
+		height: 24px;
+		border: 2px solid #36626A;
+		border-radius: 3px;
+	}
+	p{	
+		display: inline-block;
+		line-height: 26px;
+		margin-left: 10px;
+	}
+	.sub{
+		cursor: pointer;
+	}
+</style>
+</head>
+<body style="height: 100%">
+	<div>
+		<input list="timeList" type="text" id="hourMsg">
+		<datalist id="hourtimeList">
+			<option value="1" selected="selected"></option>
+			<option value="2"></option>
+			<option value="5"></option>
+			<option value="10"></option>
+			
+		</datalist>
+		<P>小时</P>
+		<input list="timeList" type="text" id="miuMsg">
+		<datalist id="miutimeList">
+			<option value="10" selected="selected"></option>
+			<option value="20"></option>
+			<option value="30"></option>
+			<option value="50"></option>
+		</datalist>
+		
+		<P>分钟</P>
+		<input type="submit" value="Submit" class="sub" onclick="setTime()">
+	</div>
+	<canvas id="canvas" style="height: 100%"></canvas>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="digit.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
